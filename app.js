@@ -23,7 +23,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       store:MongoStore.create({
-        mongoUrl: 'mongodb+srv://Shaswata-web:AtlasPassword@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority'
+        mongoUrl: 'mongodb+srv://Shaswata-web:DBApply@2023@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority'
       })
     })
 );
@@ -32,7 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //-------------------- Mongoose --------------------
-mongoose.connect('mongodb+srv://Shaswata-web:AtlasPassword@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Shaswata-web:DBApply@2023@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority')
     .then(()=>{
       console.log("Successfully Connected To Database");
     }).catch(()=>{
