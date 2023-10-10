@@ -32,7 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //-------------------- Mongoose --------------------
-mongoose.connect('mongodb+srv://Shaswata-web:AtlasPassword@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Shaswata-web:AtlasPassword@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=>{
       console.log("Successfully Connected To Database");
     }).catch(()=>{
