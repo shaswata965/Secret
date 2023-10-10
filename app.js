@@ -23,7 +23,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       store:MongoStore.create({
-        mongoUrl: 'mongodb+srv://Shaswata-web:AtlasPassword@cluster0.qqhb3.mongodb.net/secretsDB?retryWrites=true&w=majority'
+        mongoUrl: process.env.MONGO_URL
       })
     })
 );
